@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sergio Nicolai Schermer — Timmerman & Projectmanager</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #FF4D1C;
+    --dark: #0F0F0F;
+    --light: #F7F4EE;
+    --text: #1C1C1C;
+    --muted: #888;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--light);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--light);
+    border-bottom: 2px solid var(--dark);
+  }
+  .nav-logo { font-family: var(--serif); font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 2px solid var(--dark); margin-top: 65px; }
+  .hero-left { padding: 5rem 3rem 4rem; border-right: 2px solid var(--dark); display: flex; flex-direction: column; justify-content: space-between; }
+  .hero-tag { display: inline-block; background: var(--accent); color: white; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; margin-bottom: 2rem; }
+  .hero-name { font-family: var(--serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900; line-height: 1; letter-spacing: -2px; }
+  .hero-name span { color: var(--accent); }
+  .hero-sub { font-size: 1.05rem; color: var(--muted); margin-top: 1.5rem; max-width: 400px; line-height: 1.65; }
+  .hero-cta { margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 0.85rem 2rem; font-family: var(--sans); font-size: 0.9rem; font-weight: 500; text-decoration: none; letter-spacing: 0.03em; border: 2px solid var(--dark); transition: all 0.2s; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn-primary:hover { background: #e0380a; }
+  .btn-outline { background: transparent; color: var(--dark); }
+  .btn-outline:hover { background: var(--dark); color: var(--light); }
+  .hero-right { background: var(--dark); display: flex; flex-direction: column; justify-content: flex-end; padding: 3rem; position: relative; overflow: hidden; }
+  .hero-right-bg { position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; border-radius: 50%; background: var(--accent); opacity: 0.15; }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border: 2px solid rgba(255,255,255,0.12); position: relative; z-index: 1; }
+  .stat { padding: 2rem; border: 1px solid rgba(255,255,255,0.08); }
+  .stat-num { font-family: var(--serif); font-size: 3rem; font-weight: 900; color: var(--accent); line-height: 1; }
+  .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .hero-scroll { color: rgba(255,255,255,0.3); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2rem; position: relative; z-index: 1; }
+
+  /* SECTIONS */
+  section { border-bottom: 2px solid var(--dark); }
+  .section-header { display: flex; align-items: baseline; gap: 1rem; padding: 2rem 3rem 1.5rem; border-bottom: 1.5px solid var(--dark); }
+  .section-num { font-family: var(--serif); font-size: 0.9rem; color: var(--muted); }
+  .section-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; }
+  .section-title span { color: var(--accent); }
+
+  /* TIMELINE */
+  .timeline { padding: 3rem; display: grid; grid-template-columns: 230px 1fr; }
+  .timeline-item { display: contents; }
+  .timeline-year { font-size:
